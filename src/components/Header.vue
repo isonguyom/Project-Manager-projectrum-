@@ -1,45 +1,170 @@
 <template>
-    <div class="header">
-        <div class="logo">
-
-        </div>
-        <div class="header_components">
-            <div>
-            <input type="search" name="" id="search" placeholder="Search...">
-            <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M21 21l-4.486-4.494M19 10.5a8.5 8.5 0 1 1-17 0a8.5 8.5 0 0 1 17 0z" stroke="#202020" stroke-width="2" stroke-linecap="round"/></g></svg></button>
-            </div>
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path d="M440.08 341.31c-1.66-2-3.29-4-4.89-5.93c-22-26.61-35.31-42.67-35.31-118c0-39-9.33-71-27.72-95c-13.56-17.73-31.89-31.18-56.05-41.12a3 3 0 0 1-.82-.67C306.6 51.49 282.82 32 256 32s-50.59 19.49-59.28 48.56a3.13 3.13 0 0 1-.81.65c-56.38 23.21-83.78 67.74-83.78 136.14c0 75.36-13.29 91.42-35.31 118c-1.6 1.93-3.23 3.89-4.89 5.93a35.16 35.16 0 0 0-4.65 37.62c6.17 13 19.32 21.07 34.33 21.07H410.5c14.94 0 28-8.06 34.19-21a35.17 35.17 0 0 0-4.61-37.66z" fill="#202020"/><path d="M256 480a80.06 80.06 0 0 0 70.44-42.13a4 4 0 0 0-3.54-5.87H189.12a4 4 0 0 0-3.55 5.87A80.06 80.06 0 0 0 256 480z" fill="#202020"/></svg>
-            </div>
-            <div class="header_potrait">
-<img src="../assets/header_potrait.jpg" alt="">
-            </div>
-        </div>
+  <div class="header">
+    <div class="logo_wrapper">
+      <button class="mobile_nav" type="button">
+        <Icon
+          icon="charm:menu-hamburger"
+          color="#202020"
+          width="20"
+          height="20"
+        />
+      </button>
+      <a class="logo" href="http://"
+        ><img src="../assets/logo.svg" alt="logo"
+      /></a>
     </div>
+    <div class="header_components">
+      <div class="search_wrapper">
+        <div class="search_inner">
+          <input
+            type="search"
+            name=""
+            id="mainSearch"
+            placeholder="Search..."
+          />
+          <button type="submit">
+            <Icon icon="akar-icons:search" color="#202020" />
+          </button>
+        </div>
+        <div class="mobile_search">
+          <button type="button">
+            <Icon icon="akar-icons:search" color="#202020" />
+          </button>
+        </div>
+      </div>
+
+      <div class="components_wrapper">
+        <button>
+          <Icon icon="ion:notifications" color="#202020" />
+        </button>
+        <img class="header_potrait" src="../assets/header_potrait.jpg" alt="" />
+      </div>
+    </div>
+  </div>
 </template>
 <script>
+import { Icon } from "@iconify/vue";
 export default {
-    name: "Header"
+  name: "Header",
+  components: {
+    Icon,
+  },
 };
 </script>
 
 <style>
 .header {
-    display: flex;
-    justify-content: space-between;
-}
-.header_components {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.header_potrait img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1em 4%;
 }
 
-.header_potrait img {
-    border-radius: 50%;
+.logo_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.mobile_nav {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  margin-right: 0.2em;
+}
+
+.logo {
+  display: block;
+}
+
+.header_components {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.header_components button {
+  height: 100%;
+  border: none;
+  padding: 0.2em;
+  cursor: pointer;
+  background: transparent;
+}
+
+.search_wrapper {
+  width: fit-content;
+  margin-right: 0.1em;
+}
+
+.search_inner {
+  width: 100%;
+  height: 40px;
+  flex-wrap: nowrap;
+  border: 1px solid #dcdcdc;
+  border-radius: 7px;
+  display: none;
+}
+
+#mainSearch {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 1em;
+}
+
+.search_inner button {
+  padding: 0 1em;
+}
+
+
+.components_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header_potrait {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 0.3em;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile_nav {
+    display: none;
+  }
+
+  .header_components {
+    width: 85%;
+    /* justify-content: ; */
+  }
+
+.search_wrapper {
+  width: 85%;
+}
+  .search_inner {
+    display: flex;
+  }
+
+  .mobile_search {
+    display: none;
+  }
+
+  .header_potrait {
+width: 45px;
+height: 45px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header_components {
+    width: 90%;
+  }
+
+  .search_wrapper {
+  width: 90%;
+}
 }
 </style>

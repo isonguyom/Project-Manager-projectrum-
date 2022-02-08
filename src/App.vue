@@ -4,6 +4,18 @@
   </div>
 </template>
 
+<script>
+import { Icon } from '@iconify/vue'
+export default {
+  name: 'App',
+  components: {
+		Icon,
+	}
+  }
+  
+
+</script>
+
 <style>
 *,
 *::before,
@@ -11,6 +23,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+*:focus {
+  outline: 1px solid #FFDA5A;
 }
 
 img {
