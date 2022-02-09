@@ -137,7 +137,7 @@ export default {
   }
 
   .header_components {
-    width: 85%;
+    width: 70%;
     /* justify-content: ; */
   }
 
