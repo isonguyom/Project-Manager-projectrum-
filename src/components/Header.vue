@@ -160,11 +160,16 @@ height: 45px;
 
 @media screen and (min-width: 1024px) {
   .header_components {
-    width: 90%;
+    width: 80%;
   }
 
   .search_wrapper {
   width: 90%;
+  margin-right: 1em;
+}
+
+.header_potrait {
+  margin-left: 1em;
 }
 }
 </style>
