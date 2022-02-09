@@ -9,6 +9,11 @@ const routes = [
     component: Home
   },
   {
+    path: '/main',
+    name: 'Main',
+    component: () => import( '../views/Main.vue')
+  },
+  {
     path: '/header',
     name: 'Header',
     component: () => import( '../components/Header.vue')
