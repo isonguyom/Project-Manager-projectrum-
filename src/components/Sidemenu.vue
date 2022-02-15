@@ -1,13 +1,13 @@
 <template>
   <div class="side_menu">
     <ul class="main_nav">
-      <li><a href="">Dashboard</a></li>
-      <li><a href="">Projects</a></li>
-      <li><a href="">Tasks</a></li>
-      <li><a href="">Calendar</a></li>
-      <li><a href="">Messages</a></li>
-      <li><a href="">Files</a></li>
-      <li><a href="">Settings</a></li>
+      <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Dashboard</router-link></li>
+      <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Projects</router-link></li>
+      <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Tasks</router-link></li>
+      <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Calendar</router-link></li>
+      <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Messages</router-link></li>
+      <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Files</router-link></li>
+      <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Settings</router-link></li>
     </ul>
   </div>
 </template>
@@ -38,7 +38,11 @@ export default {
   margin: 0.7em 0;
 }
 
-.main_nav li a {
+.main_nav li:first-child {
+    margin-top: 0;
+}
+
+.main_nav li .nav_link {
     color: #202020;
     text-decoration: none;
     display: block;

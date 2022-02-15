@@ -1,5 +1,25 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <Content
+      :content="'Nothing on about'"
+    />
   </div>
 </template>
+<script>
+import { Icon } from "@iconify/vue";
+import Content from "../components/Content.vue";
+export default {
+  name: "Main",
+  components: {
+    Icon,
+    Content
+  },
+};
+</script>
+
+<style>
+
+.about {
+  position: relative;
+}
+</style>
