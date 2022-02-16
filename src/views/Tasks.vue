@@ -1,13 +1,13 @@
 <template>
-    <div>
-        <h1>Projects</h1>
+    <div class="m_body">
+       <h1>Tasks</h1>
     </div>
 </template>
 
 <script>
 import { Icon } from "@iconify/vue";
 export default {
-  name: "Projects",
+  name: "Tasks",
   components: {
     Icon,
   },
@@ -15,8 +15,4 @@ export default {
 </script>
 
 <style>
-/* .main_body {
-  display: flex;
-  align-items: flex-start;
-} */
 </style>

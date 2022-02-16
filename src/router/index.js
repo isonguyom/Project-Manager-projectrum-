@@ -4,33 +4,39 @@ import {
 } from 'vue-router'
 import Home from '../views/Home.vue'
 import Dashboard from '../views/Dashboard.vue'
-import About from '../views/About.vue'
+import Projects from '../views/Projects.vue'
+import Tasks from '../views/Tasks.vue'
+import Main from '../views/Main.vue'
 
 
 const routes = [{
-    path: '',
+    path: '/',
     name: 'Home',
     component: Home
   },
   {
     path: '/main',
     name: 'Main',
-    component: Dashboard,
+    component: Main,
     children: [{
-      path: 'dashboard',
-      //this is where the main work lies
-      name: 'Dashboard',
-      component: Dashboard,
+        path: 'dashboard',
+        name: 'Dashboard',
+        component: Dashboard,
 
-    },
-    {
-      path: 'about',
-      //this is where the main work lies
-      name: 'About',
-      component: About,
+      },
+      {
+        path: 'projects',
+        name: 'Projects',
+        component: Projects,
 
-    }
-  ]
+      },
+      {
+        path: 'tasks',
+        name: 'Tasks',
+        component: Tasks,
+
+      },
+    ]
 
   },
   {

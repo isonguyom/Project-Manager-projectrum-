@@ -2,8 +2,8 @@
   <div class="side_menu">
     <ul class="main_nav">
       <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Dashboard</router-link></li>
-      <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Projects</router-link></li>
-      <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Tasks</router-link></li>
+      <li><router-link class="nav_link" :to="{ name: 'Projects' }">Projects</router-link></li>
+      <li><router-link class="nav_link" :to="{ name: 'Tasks' }">Tasks</router-link></li>
       <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Calendar</router-link></li>
       <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Messages</router-link></li>
       <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Files</router-link></li>
