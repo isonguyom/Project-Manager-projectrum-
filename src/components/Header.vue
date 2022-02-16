@@ -138,7 +138,6 @@ export default {
 
   .header_components {
     width: 70%;
-    /* justify-content: ; */
   }
 
 .search_wrapper {

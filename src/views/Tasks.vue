@@ -1,7 +1,7 @@
 <template>
-    <div class="m_body">
-       <h1>Tasks</h1>
-    </div>
+  <div class="tasks">
+    <h1>Tasks</h1>
+  </div>
 </template>
 
 <script>
@@ -14,5 +14,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
 </style>

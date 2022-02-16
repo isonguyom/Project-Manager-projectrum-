@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="dashboard">
        <h1>Dashboard</h1>
     </div>
 </template>
@@ -14,5 +14,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
 </style>

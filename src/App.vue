@@ -26,7 +26,7 @@ export default {
 }
 
 *:focus {
-  outline: 1px solid #FFDA5A;
+  outline: 1px solid #cac8be;
 }
 
 img {
@@ -46,4 +46,9 @@ img {
   display: block;
   width: 40%;
 }
+
+
+.main_nav li a.router-link-exact-active {
+      color: #4B7FB9;
+    }
 </style>

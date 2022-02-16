@@ -7,6 +7,10 @@ import Dashboard from '../views/Dashboard.vue'
 import Projects from '../views/Projects.vue'
 import Tasks from '../views/Tasks.vue'
 import Main from '../views/Main.vue'
+import Calendar from '../views/Calendar.vue'
+import Messages from '../views/Messages.vue'
+import Files from '../views/Files.vue'
+import Settings from '../views/Settings.vue'
 
 
 const routes = [{
@@ -34,6 +38,30 @@ const routes = [{
         path: 'tasks',
         name: 'Tasks',
         component: Tasks,
+
+      },
+      {
+        path: 'calendar',
+        name: 'Calendar',
+        component: Calendar,
+
+      },
+      {
+        path: 'messages',
+        name: 'Messages',
+        component: Messages,
+
+      },
+      {
+        path: 'files',
+        name: 'Files',
+        component: Files,
+
+      },
+      {
+        path: 'settings',
+        name: 'Settings',
+        component: Settings,
 
       },
     ]

@@ -4,10 +4,10 @@
       <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Dashboard</router-link></li>
       <li><router-link class="nav_link" :to="{ name: 'Projects' }">Projects</router-link></li>
       <li><router-link class="nav_link" :to="{ name: 'Tasks' }">Tasks</router-link></li>
-      <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Calendar</router-link></li>
-      <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Messages</router-link></li>
-      <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Files</router-link></li>
-      <li><router-link class="nav_link" :to="{ name: 'Dashboard' }">Settings</router-link></li>
+      <li><router-link class="nav_link" :to="{ name: 'Calendar' }">Calendar</router-link></li>
+      <li><router-link class="nav_link" :to="{ name: 'Messages' }">Messages</router-link></li>
+      <li><router-link class="nav_link" :to="{ name: 'Files' }">Files</router-link></li>
+      <li><router-link class="nav_link" :to="{ name: 'Settings' }">Settings</router-link></li>
     </ul>
   </div>
 </template>
@@ -25,6 +25,7 @@ export default {
 <style>
 .side_menu {
   padding: 1em 4%;
+  display: none;
 }
 
 .main_nav {
@@ -51,6 +52,7 @@ export default {
 @media screen and (min-width: 768px) {
     .side_menu {
         width: 30%;
+        display: block;
     }
 }
 
