@@ -9,7 +9,7 @@
           height="20"
         />
       </button>
-      <a class="logo" href="http://"
+      <a class="logo" href="../views/Home.vue"
         ><img src="../assets/logo.svg" alt="logo"
       /></a>
     </div>

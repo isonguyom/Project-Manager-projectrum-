@@ -48,6 +48,7 @@ img {
   min-height: 100vh;
   background: #4b7fb9;
   display: flex;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 }
