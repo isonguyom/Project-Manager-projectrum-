@@ -3,10 +3,11 @@ import {
   createWebHashHistory
 } from 'vue-router'
 import Home from '../views/Home.vue'
+import Main from '../views/Main.vue'
 import Dashboard from '../views/Dashboard.vue'
 import Projects from '../views/Projects.vue'
 import Tasks from '../views/Tasks.vue'
-import Main from '../views/Main.vue'
+import Teams from '../views/Teams.vue'
 import Calendar from '../views/Calendar.vue'
 import Messages from '../views/Messages.vue'
 import Files from '../views/Files.vue'
@@ -38,6 +39,12 @@ const routes = [{
         path: 'tasks',
         name: 'Tasks',
         component: Tasks,
+
+      },
+      {
+        path: 'teams',
+        name: 'Teams',
+        component: Teams,
 
       },
       {

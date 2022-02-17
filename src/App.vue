@@ -1,28 +1,38 @@
 <template>
-   <div>
+  <div>
     <router-view />
   </div>
 </template>
 
 <script>
-import { Icon } from '@iconify/vue'
+import { Icon } from "@iconify/vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-		Icon,
-	}
-  }
-  
-
+    Icon,
+  },
+};
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #202020;
+    scroll-behavior: smooth;
+    font-weight: 400;
 }
 
 *:focus {
@@ -36,7 +46,7 @@ img {
 .onboarding {
   width: 100%;
   min-height: 100vh;
-  background: #4B7FB9;
+  background: #4b7fb9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,8 +57,9 @@ img {
   width: 40%;
 }
 
-
-.main_nav li a.router-link-exact-active {
-      color: #4B7FB9;
-    }
+.main_nav a.router-link-exact-active {
+  background: #4b7fb9;
+  color: #fff !important;
+  font-weight: 500;
+}
 </style>
