@@ -1,13 +1,14 @@
 <template>
-  <div class="tasks">
-    <h1>Tasks</h1>
+  <div class="teams">
+    <h1>Pending Tasks</h1>
+
   </div>
 </template>
 
 <script>
 import { Icon } from "@iconify/vue";
 export default {
-  name: "Tasks",
+  name: "PendingTasks",
   components: {
     Icon,
   },

@@ -1,13 +1,14 @@
 <template>
-    <div class="projects">
-        <h1>Projects</h1>
-    </div>
+  <div class="teams">
+    <h1>Trash Projects</h1>
+
+  </div>
 </template>
 
 <script>
 import { Icon } from "@iconify/vue";
 export default {
-  name: "Projects",
+  name: "TrashProjects",
   components: {
     Icon,
   },

@@ -2,8 +2,8 @@
   <div class="side_menu">
     <ul class="main_nav">
       <router-link tag="li" class="nav_link" :to="{ name: 'Dashboard' }"><Icon class="menu_icon" icon="ic:round-space-dashboard" :inline="true" />Dashboard</router-link>
-      <router-link tag="li" class="nav_link" :to="{ name: 'Projects' }"><Icon class="menu_icon" icon="zondicons:travel-case" :inline="true" />Projects</router-link>
-      <router-link tag="li" class="nav_link" :to="{ name: 'Tasks' }"><Icon class="menu_icon" icon="fa-solid:tasks" :inline="true" />Tasks</router-link>
+      <router-link tag="li" class="nav_link" :to="{ name: 'PendingProjects' }"><Icon class="menu_icon" icon="zondicons:travel-case" :inline="true" />Projects</router-link>
+      <router-link tag="li" class="nav_link" :to="{ name: 'PendingTasks' }"><Icon class="menu_icon" icon="fa-solid:tasks" :inline="true" />Tasks</router-link>
       <router-link tag="li" class="nav_link" :to="{ name: 'Teams' }"><Icon class="menu_icon" icon="bxl:microsoft-teams" :inline="true" />Teams</router-link>
       <router-link tag="li" class="nav_link" :to="{ name: 'Calendar' }"><Icon class="menu_icon" icon="clarity:calendar-solid" :inline="true" />Calendar</router-link>
       <router-link tag="li" class="nav_link" :to="{ name: 'Messages' }"><Icon class="menu_icon" icon="bi:envelope-open-fill" :inline="true" />Messages</router-link>
