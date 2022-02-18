@@ -49,6 +49,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 .onboarding {
   width: 100%;
   min-height: 100vh;
