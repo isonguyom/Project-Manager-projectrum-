@@ -27,6 +27,16 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+.projects_wrapper {
+  margin-top: 2em;
+display: flex;
+justify-content: space-between;
+align-content: space-around;
+flex-wrap: wrap;
+}
 
+.projects_wrapper>*{
+  margin-bottom: 2em;
+}
 </style>

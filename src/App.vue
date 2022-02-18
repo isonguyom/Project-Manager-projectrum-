@@ -44,6 +44,11 @@ img {
   max-width: 100%;
 }
 
+a {
+  color: #4b7fb9;
+  text-decoration: none;
+}
+
 .onboarding {
   width: 100%;
   min-height: 100vh;
@@ -80,7 +85,7 @@ img {
 }
 
 .lower_menu .nav_link {
-  margin-right: 1em;
+  margin-right: 1.5em;
   text-decoration: none;
   font-size: 0.9rem;
   color: #404040;
