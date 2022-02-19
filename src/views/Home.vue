@@ -22,7 +22,7 @@ export default {
   padding: 0.7em;
   text-decoration: none;
   color: #4b7fb9;
-  background: #FFDA5A;
+  background: #FFf;
   border-radius: 5px;
 }
 </style>

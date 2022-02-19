@@ -34,5 +34,20 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+#tasksTable {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+   margin-top: 1.5em;
+}
+
+#tasksTable th {
+  color: #303030;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.3em;
+  height: 45px;
+      border: 1px solid #DCDCDC;
+}
 </style>
