@@ -1,29 +1,44 @@
 <template>
-  <div class="project_card">
+  <div class="project_card" v-for="project in projects" :key="project.title">
     <div class="project_card_header">
       <div>
-        <h2 class="project_card_title">Project Title</h2>
-        <p class="project_card_description">Description</p>
+        <h2 class="project_card_title">{{ project.title }}</h2>
+        <p class="project_card_description">{{ project.description }}</p>
       </div>
-      <button class="project_card_morebtn">
-        <Icon icon="akar-icons:more-horizontal-fill" color="#606060" />
-      </button>
+      <div class="project_card_nav">
+        <button class="project_card_morebtn" @click="toggleMenu">
+          <Icon icon="akar-icons:more-horizontal-fill" color="#606060" />
+        </button>
+        <ul class="project_card_menu" v-if="showMenu">
+          <li><a href="">View project</a></li>
+          <li><a href="">Share</a></li>
+          <li><a href="">Archive</a></li>
+          <li><a href="">Trash</a></li>
+        </ul>
+      </div>
     </div>
     <div class="project_card_date">
-      <span>Created: <a href="http://">Today</a></span>
-      <span>Deadline: <a href="http://">Tomorrow</a></span>
+      <span
+        >Created: <a href="http://">{{ project.date_created }}</a></span
+      >
+      <span
+        >Deadline: <a href="http://">{{ project.deadline }}</a></span
+      >
     </div>
-    <div class="project_card_progress">10/25</div>
+    <div class="project_card_progress">{{ project.range }}</div>
     <div class="project_card_footer">
       <div class="project_card_collaborators">
         <p>Collabators</p>
         <div>
+          <!-- {{ project.collaborators }} -->
           <img src="../assets/header_potrait.jpg" alt="" srcset="" />
           <img src="../assets/header_potrait.jpg" alt="" srcset="" />
           <img src="../assets/header_potrait.jpg" alt="" srcset="" />
         </div>
       </div>
-      <a class="project_card_comment" href="http://">7 Comments</a>
+      <a class="project_card_comment" href="http://"
+        >{{ project.comment }} Comments</a
+      >
     </div>
   </div>
 </template>
@@ -34,6 +49,32 @@ export default {
   name: "ProjectCard",
   components: {
     Icon,
+  },
+  data() {
+    return {
+      showMenu: false,
+      projects: [
+        {
+          title: "Task Title",
+          description: "Description",
+          date_created: "Today",
+          deadline: "Tomorrow",
+          range: "10/25",
+          comment: 7,
+          collaborators: [
+            {
+              collab1: "../assets/header_potrait.jpg",
+            },
+          ],
+        },
+      ],
+    };
+  },
+
+  methods: {
+    toggleMenu() {
+      this.showMenu = !this.showMenu;
+    },
   },
 };
 </script>
@@ -48,13 +89,13 @@ export default {
   line-height: 1.5em;
 }
 
-.project_card>div {
+.project_card > div {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5em;
 }
 
-.project_card>div:last-child {
+.project_card > div:last-child {
   margin-bottom: 0;
 }
 
@@ -76,10 +117,32 @@ export default {
   font-size: 0.85rem;
 }
 
+.project_card .project_card_nav {
+  position: relative;
+  text-align: right;
+}
+
 .project_card .project_card_morebtn {
   background: transparent;
   border: none;
   cursor: pointer;
+}
+
+.project_card .project_card_menu {
+  text-align: left;
+  list-style: none;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #25252523, -2px -2px 5px #25252523;
+  padding: 0.7em;
+  position: absolute;
+  right: 0;
+  width: 115px;
+}
+
+.project_card .project_card_menu a {
+  color: #404040;
+  font-size: 0.85rem;
 }
 
 .project_card .project_card_date {
@@ -89,7 +152,7 @@ export default {
 }
 
 .project_card .project_card_date span:first-child {
- margin-right: 1.5em;
+  margin-right: 1.5em;
 }
 
 .project_card .project_card_progress {
@@ -104,7 +167,6 @@ export default {
   color: #707070;
 }
 
-
 .project_card .project_card_footer {
   align-items: flex-end;
 }
@@ -116,10 +178,9 @@ export default {
 
 .project_card .project_card_collaborators img {
   width: 35px;
-  height:35px;
+  height: 35px;
   border-radius: 50%;
   margin-right: 0.1em;
   cursor: pointer;
 }
-
 </style>
