@@ -54,19 +54,6 @@ export default {
     return {
       showMenu: false,
       projects: [
-        {
-          title: "Task Title",
-          description: "Description",
-          date_created: "Today",
-          deadline: "Tomorrow",
-          range: "10/25",
-          comment: 7,
-          collaborators: [
-            {
-              collab1: "../assets/header_potrait.jpg",
-            },
-          ],
-        },
       ],
     };
   },
@@ -75,6 +62,13 @@ export default {
     toggleMenu() {
       this.showMenu = !this.showMenu;
     },
+  },
+
+   mounted() {
+fetch('http://localhost:3000/projects')
+.then(res => res.json())
+.then(data => this.projects = data)
+.catch(err => console.log(err.message))
   },
 };
 </script>

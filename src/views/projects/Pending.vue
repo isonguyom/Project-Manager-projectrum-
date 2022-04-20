@@ -3,11 +3,6 @@
     <!-- <h1>Pending Projects</h1> -->
     <div class="projects_wrapper">
       <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
     </div>
   </div>
 </template>
